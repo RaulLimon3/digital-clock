@@ -1,2 +1,67 @@
 @import url('./base/normalize.css');
 @import url('./base/reset.css');
+
+.main {
+    width: 100dvw;
+    height: 100dvh;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.date-container,
+.time-container {
+    width: 100%;
+    text-align: center;
+}
+
+.date-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.time-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.full-date {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.time {
+    font-size: 3rem;
+    font-weight: 900;
+    align-self: start;
+}
+
+@media screen and (min-width: 768px) {
+    .date {
+        font-size: 2rem;
+    }
+
+    .full-date {
+        font-size: 3rem;
+    }
+
+    .time-container {
+        flex-grow: 3;
+    }
+
+    .time {
+        font-size: 6rem;
+        align-self: center;
+    }
+}
