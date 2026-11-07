@@ -1,5 +1,6 @@
 import './style.css';
 
+const body = document.querySelector('body');
 const date = document.getElementById('date');
 const fullDate = document.getElementById('fullDate');
 const time = document.getElementById('time');
@@ -17,6 +18,12 @@ fullDate.textContent = currentDate.toLocaleDateString('es-MX', {
 
 const updateClock = () => {
     const currentTime = new Date();
+    const dayTime = currentTime.getHours();
+    if (dayTime <= 7 || dayTime >=18) {
+        body.classList.add('dark');
+    } else {
+        body.classList.remove('dark');
+    }
     time.textContent = currentTime.toLocaleTimeString('es-MX', {
         hour: '2-digit',
         minute: '2-digit',

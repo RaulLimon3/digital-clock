@@ -1,6 +1,11 @@
 @import url('./base/normalize.css');
 @import url('./base/reset.css');
 
+.dark {
+    background: #333;
+    color: #fff;
+}
+
 .main {
     width: 100dvw;
     height: 100dvh;
