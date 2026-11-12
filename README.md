@@ -6,7 +6,7 @@ A lightweight, responsive digital clock built with vanilla JavaScript. It displa
 
 ## 🚀 Live Demo
 
-🔗  [JavaScript Version] __Coming soon__
+🔗  [JavaScript Version](https://digital-clock-ten-alpha.vercel.app)
 
 ---
 
