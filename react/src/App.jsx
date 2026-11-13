@@ -1,19 +1,36 @@
 import "./App.css";
 
 function App() {
+  const currentDay = new Date();
   return (
     <>
       <main className="main">
         <div className="date-container">
-          <time className="date" id="date">Lunes</time>
-          <time className="full-date" id="fullDate">7 de Noviembre de 2026</time>
+          <time className="date">
+            {currentDay.toLocaleDateString('en-US', {
+              weekday: "long",
+            })}
+          </time>
+          <time className="full-date">
+            {currentDay.toLocaleDateString('en-US', {
+              day: '2-digit',
+              month: 'long',
+              year: 'numeric'
+            })}
+          </time>
         </div>
         <div className="time-container">
-          <time className="time" id="time">00:00 p.m</time>
+          <time className="time">
+            {currentDay.toLocaleTimeString('en-US', {
+              hour: '2-digit',
+              minute: '2-digit',
+              second: '2-digit'
+            })}
+          </time>
         </div>
       </main>
     </>
   );
-};
+}
 
 export default App;
