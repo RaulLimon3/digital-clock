@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 function App() {
@@ -29,6 +29,19 @@ function App() {
       second: "2-digit",
     }),
   );
+
+  useEffect(() => {
+    setInterval(() => {
+      const currentDate = new Date();
+      setTime(
+        currentDate.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+        }),
+      );
+    }, 1000);
+  }, [time]);
 
   return (
     <>
