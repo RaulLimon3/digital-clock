@@ -31,7 +31,7 @@ function App() {
   );
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       const currentDate = new Date();
       setTime(
         currentDate.toLocaleTimeString("en-US", {
@@ -41,7 +41,10 @@ function App() {
         }),
       );
     }, 1000);
-  }, [time]);
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
 
   return (
     <>
