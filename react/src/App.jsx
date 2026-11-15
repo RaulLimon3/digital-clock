@@ -12,34 +12,36 @@ function App() {
   const formattedDate = `${year}-${month}-${day}`;
   const formattedTime = `${hour}:${minutes}:${seconds}`;
 
-  const [date, setDate] = useState(
-    currentDay.toLocaleDateString("en-US", { weekday: "long" }),
-  );
-  const [fullDate, setFullDate] = useState(
-    currentDay.toLocaleDateString("en-US", {
+  const [clockData, setClockData] = useState({
+    date: currentDay.toLocaleDateString("en-US", { weekday: "long" }),
+    fullDate: currentDay.toLocaleDateString("en-US", {
       day: "2-digit",
       month: "long",
       year: "numeric",
     }),
-  );
-  const [time, setTime] = useState(
-    currentDay.toLocaleTimeString("en-US", {
+    time: currentDay.toLocaleTimeString("en-US", {
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
     }),
-  );
+  });
 
   useEffect(() => {
     const interval = setInterval(() => {
       const currentDate = new Date();
-      setTime(
-        currentDate.toLocaleTimeString("en-US", {
+      setClockData({
+        date: currentDate.toLocaleDateString("en-US", { weekday: "long" }),
+        fullDate: currentDate.toLocaleDateString("en-US", {
+          day: "2-digit",
+          month: "long",
+          year: "numeric",
+        }),
+        time: currentDate.toLocaleTimeString("en-US", {
           hour: "2-digit",
           minute: "2-digit",
           second: "2-digit",
         }),
-      );
+      });
     }, 1000);
     return () => {
       clearInterval(interval);
@@ -51,15 +53,15 @@ function App() {
       <main className="main">
         <div className="date-container">
           <time className="date" dateTime={formattedDate}>
-            {date}
+            {clockData.date}
           </time>
           <time className="full-date" dateTime={formattedDate}>
-            {fullDate}
+            {clockData.fullDate}
           </time>
         </div>
         <div className="time-container">
           <time className="time" dateTime={formattedTime}>
-            {time}
+            {clockData.time}
           </time>
         </div>
       </main>
