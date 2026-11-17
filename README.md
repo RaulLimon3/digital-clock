@@ -1,6 +1,6 @@
 # 🕑 Digital clock
 
-A lightweight, responsive digital clock built with vanilla JavaScript. It displays the current day, full date, and time, and automatically switches to a dark theme in the evening and early morning.
+A lightweight, responsive digital clock built with vanilla JavaScript and React. It displays the current day, full date, and time, automatically switching to a dark theme in the evening and early morning.
 
 ---
 
@@ -13,13 +13,14 @@ A lightweight, responsive digital clock built with vanilla JavaScript. It displa
 ## 📸 Screenshots
 
 ![Mobile](./screenshots/mobile-design.png)
+![Dark mode](./screenshots/dark-mode.png)
 ![Responsive design](./screenshots/responsive-design.png)
 
 ---
 
 ## Project Overview
 
-This project displays the current day, full date, and time. The clock updates every second and switches to a dark theme based on the time of day.
+This project was initially developed with vanilla JavaScript and later migrated to React to explore component-based architecture and state management. Both versions display the current day, full date, and time, updating every second and switching to a dark theme based on the time of day.
 
 ---
 
@@ -44,6 +45,13 @@ This project displays the current day, full date, and time. The clock updates ev
 
 ### React
 
+- React
+- JavaScript (ES6+)
+- CSS3
+- Vite
+- React Hooks (useState, useEffect)
+- Schibsted Grotesk
+
 
 ---
 
@@ -51,6 +59,40 @@ This project displays the current day, full date, and time. The clock updates ev
 
 ```
 digital-clock/
+├── react/
+│   ├── public/
+│   │   ├── android-chrome-192x192.png
+│   │   ├── android-chrome-512x512.png
+│   │   ├── apple-touch-icon.png
+│   │   ├── favicon-16x16.png
+│   │   ├── favicon-32x32.png
+│   │   ├── favicon.ico
+│   │   └── site.webmanifest
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── fonts/
+│   │   │       ├── Schibsted_Grotesk/
+│   │   │       ├── static/
+│   │   │       ├── SchibstedGrotesk-Italic-VariableFont_wght.ttf
+│   │   │       └── SchibstedGrotesk-VariableFont_wght.ttf
+│   │   ├── css/
+│   │   │   └── base/
+│   │   │       ├── font.css
+│   │   │       └── reset.css
+│   │   ├── App.css
+│   │   ├── App.jsx
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js
+├── screenshots/
+│   ├── dark-mode.png
+│   ├── mobile-design.png
+│   └── responsive-design.png
 ├── vanilla/
 │   ├── public/
 │   │   ├── android-chrome-192x192.png
@@ -79,6 +121,7 @@ digital-clock/
 │   ├── index.html
 │   ├── package-lock.json
 │   └── package.json
+├── .gitignore
 └── README.md
 ```
 
@@ -96,6 +139,12 @@ digital-clock/
 
 ### React
 
+- Understand React's component-based architecture.
+- Manage component state with `useState`.
+- Handle side effects and lifecycle behavior with `useEffect`.
+- Update the UI reactively through state changes.
+- Work with JavaScript's `Date` object in React.
+- Implement dynamic CSS classes based on component state.
 
 ---
 
@@ -103,7 +152,7 @@ digital-clock/
 
 - Add a stopwatch.
 - Add a countdown timer.
-- Create a React version.
+- Add Tailwind CSS to the React version.
 
 ---
 
@@ -126,6 +175,32 @@ digital-clock/
 
 ```bash
    cd digital-clock/vanilla
+```
+
+3. Install dependencies:
+
+```bash
+   npm install
+```
+
+4. Start the development server:
+
+```bash
+   npm run dev
+```
+
+### React
+
+1. Clone the repository:
+
+```bash
+   git clone https://github.com/RaulLimon3/digital-clock.git
+```
+
+2. Navigate to the React project:
+
+```bash
+   cd digital-clock/react
 ```
 
 3. Install dependencies:
