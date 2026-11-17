@@ -22,6 +22,8 @@ function App() {
     minute: '2-digit',
     second: '2-digit',
   });
+  const currentHour = currentDate.getHours();
+  const dayTime = currentHour <= 7 || currentHour >= 18 ? 'dark' : '';
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,7 +36,7 @@ function App() {
 
   return (
     <>
-      <main className="main">
+      <main className={`main ${dayTime}`}>
         <div className="date-container">
           <time className="date" dateTime={formattedDate}>
             {date}
