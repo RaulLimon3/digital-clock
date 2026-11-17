@@ -7,6 +7,7 @@ A lightweight, responsive digital clock built with vanilla JavaScript and React.
 ## 🚀 Live Demo
 
 🔗  [JavaScript Version](https://digital-clock-ten-alpha.vercel.app)
+🔗  [React Version](https://digital-clock-react-umber.vercel.app)
 
 ---
 
